@@ -137,7 +137,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                   SizedBox(height: 25),
 
-            // Weiter Button
+            // Continue Button
             FlatButton(
               color: neutralerButton,
               height: 65.0,

@@ -14,7 +14,7 @@ class SpecialEndScreenContainer extends StatelessWidget {
   }
 }
 
-// Wenn Movie nicht gefunden wurde
+// if movie was not found
 class SpecialEndScreen extends StatefulWidget {
   SpecialEndScreenState createState() => SpecialEndScreenState();
 }
@@ -80,7 +80,7 @@ class SpecialEndScreenState extends State {
 }
 
 /*
-// Wenn Movie gefunden wurde
+// if movie was found
 class SpecialEndScreenFind extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

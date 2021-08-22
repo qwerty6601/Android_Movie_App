@@ -39,14 +39,14 @@ class _BackendlogicScreenState extends State<BackendlogicScreen> {
                   minWidth: 250.0,
                   padding: EdgeInsets.only(bottom: 20),
                   shape: RoundedRectangleBorder(
-                    // Square = BorderRadius.circular(0.0)
+                    
                       borderRadius: BorderRadius.circular(35.0),
                       side: BorderSide(color: Colors.white, width: 2)),
                   onPressed: () async {
                     g++;
                     yesCounter++;
                     await sendHttp(_id, true, pId, gender);
-                    // Wenn nach einem Film gefragt wurde
+                    // When a movie is asked for
                     if (_id == 999999) {
                       // PostMapping guessquestionwithanswer aufrufen
                       Navigator.push(
@@ -64,7 +64,7 @@ class _BackendlogicScreenState extends State<BackendlogicScreen> {
                 ),
                 SizedBox(height: 20),
 
-                // NO BUTTON
+                // "No" button
                 FlatButton(
                   color: noButton,
                   height: 65.0,

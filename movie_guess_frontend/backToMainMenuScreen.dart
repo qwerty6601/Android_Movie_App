@@ -24,14 +24,14 @@ class BackToMainMenuScreen extends StatelessWidget {
                   ),
 
                   SizedBox(height: 50),
-                  // Hier kommen die Buttons
+                  // Buttons come here
                   FlatButton(
                       color: neutralerButton,
                       height: 65.0,
                       minWidth: 250.0,
                       padding: EdgeInsets.only(bottom: 20),
                       shape: RoundedRectangleBorder(
-                        // Square = BorderRadius.circular(0.0)
+                      
                           borderRadius: BorderRadius.circular(35.0),
                           side: BorderSide(color: Colors.white, width: 2)),
                       onPressed: () {

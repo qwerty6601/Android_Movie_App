@@ -28,7 +28,7 @@ void main() async {
   ));
 }
 
-//Hilfsmethoden Anfang
+//start the helper methods
 const Color primary = Colors.grey;
 const Color secondary = Colors.orange;
 const Color yesButton = Colors.green;
@@ -169,7 +169,7 @@ class Home extends StatelessWidget {
                       children: [
                        SizedBox(height: 20),
 
-                      // Hier ist das Logo
+                      // Logo is here
                       Image.asset(
                         'assets/logo_movieapp.png',
                         height: 150,
@@ -184,7 +184,7 @@ class Home extends StatelessWidget {
                         minWidth: 250.0,
                         padding: EdgeInsets.only(bottom: 20),
                         shape: RoundedRectangleBorder(
-                              // Square = BorderRadius.circular(0.0)
+                              
                               borderRadius: BorderRadius.circular(35.0),
                               side: BorderSide(color: Colors.white, width: 2)),
                           onPressed: () {
@@ -225,10 +225,8 @@ class EndScreenState extends State {
 
 
   void updateMovieScreen() async {
-    //String movieURLRaw = await movieImage(movieFinal[0].id);
 
     setState(() {
-      //movieURL = movieURLRaw;
 
     });
   }
@@ -304,7 +302,7 @@ class EndScreenState extends State {
                     "Play again",
                   ),
               ),
-              SizedBox(height: 20), // Platzhalter
+              SizedBox(height: 20), // Placeholder
             ])),
       ),
     );
