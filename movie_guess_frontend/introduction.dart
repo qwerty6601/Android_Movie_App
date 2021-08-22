@@ -43,14 +43,14 @@ class IntroductionScreen extends StatelessWidget {
 
               SizedBox(height: 25),
 
-              // Hier kommen die Buttons
+              // the buttons come here
               FlatButton(
                   color: neutralerButton,
                   height: 65.0,
                   minWidth: 250.0,
                   padding: EdgeInsets.only(bottom: 20),
                   shape: RoundedRectangleBorder(
-                      // Square = BorderRadius.circular(0.0)
+                      
                       borderRadius: BorderRadius.circular(35.0),
                       side: BorderSide(color: Colors.white, width: 2)),
                   onPressed: () {
@@ -84,7 +84,7 @@ class IntroductionScreen extends StatelessWidget {
                     "Back to Main Menu",
                   ),
               ),
-              SizedBox(height: 20), // Platzhalter
+              SizedBox(height: 20), // Placeholder
             ])),
 
       ),
