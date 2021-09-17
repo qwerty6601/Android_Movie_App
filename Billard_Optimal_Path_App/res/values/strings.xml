@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Billard_App_02</string>
+    <string name="BA_title_label">BA_title</string>
+    <string name="BA_title_hint">BA_title_hint</string>
+    <string name="BA_name">Billard App</string>
+    <string name="take_photo">Take Photo</string>
+
+</resources>
