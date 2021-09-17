@@ -9,21 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 import java.util.function.Function;
 
-/***
- * Main
- * Hash map which maps players (key) —> hash map
- * Map<Player, Map<Movie,Double>> (double for counter)
- * - Counter is just value of player
- *
- * Map<Movie, Double> totalCounter
- */
 
-// 1. delete all movies in db w/ "not given" attributes
-@Service
 @RestController
 public class Main {
-
-    // Linkedlist ist schneller für den Anwendungsfall
+    
     List<Movie> movies = new LinkedList<>();
     List<Counter> counters = new LinkedList<>();
     ArrayList<Double> probArray = new ArrayList<>();
@@ -482,8 +471,8 @@ public class Main {
     public List<Movie> refineMovies(Question q, boolean ja, int pId) {
         List<String> crits = lastCrit.get(pId);
         lastCrit.remove(pId);
-        if (ja) // wenn yes geantwortet wird, entferne falls answerNo true
-            // year Ausnahme
+        if (ja) 
+            // year exception
             if (q.getMovieCol().equals("title_year")) {
                 try {
                     if (!(q.crit.equals("not_given") || q.crit.equals("not given"))) {
@@ -511,7 +500,7 @@ public class Main {
                     System.out.println("Problem mit dem title_year");
                 }
 
-                // duration Ausnahme
+                // duration exception
             } else if (q.getMovieCol().equals("duration")) {
                 try {
                     if (!(q.crit.equals("not_given") || q.crit.equals("not given"))) {
@@ -540,7 +529,7 @@ public class Main {
                 } catch (Exception e) {
                     System.out.println("Problem mit der duration");
                 }
-                // actor Ausnahme
+                // actor exception
             } else if (q.getMovieCol().equals("actor_1_name") ||
                     q.getMovieCol().equals("actor_2_name") ||
                     q.getMovieCol().equals("actor_3_name")) {
@@ -576,8 +565,8 @@ public class Main {
             }
 
 
-        if (!ja) // wenn no geantwortet wird, entferne falls answerYes true
-            // year Ausnahme
+        if (!ja) // remove if user answers no
+            // year exception
             if (q.getMovieCol().equals("title_year")) {
                 try {
                     if (!(q.crit.equals("not_given") || q.crit.equals("not given"))) {
@@ -605,7 +594,7 @@ public class Main {
                     System.out.println("Problem mit dem title_year");
                 }
 
-                // duration Ausnahme
+                // duration exception
             } else if (q.getMovieCol().equals("duration")) {
                 try {
                     if (!(q.crit.equals("not_given") || q.crit.equals("not given"))) {
